@@ -28,7 +28,14 @@ public class IntList {
 
 	/** Returns the ith value in this list.*/
 	public int get(int i) {
-
+		IntList getpoint = this;
+		int k = 0;
+		while(k != i){
+			k ++;
+			getpoint = getpoint.rest;
+			continue;
+		}
+		return getpoint.first;
 	}
 
 	public static void main(String[] args) {
